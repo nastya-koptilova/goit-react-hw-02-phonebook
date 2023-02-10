@@ -4,6 +4,7 @@ import { GlobalStyle } from './GlobalStyle';
 import { Form } from './Form/Form';
 import { Contacts } from './Contacts/Contacts';
 import { Filter } from './Filter/Filter';
+import css from './App.module.css';
 
 export class App extends Component {
   state = {
@@ -42,7 +43,7 @@ export class App extends Component {
     return (
       <>
         <GlobalStyle />
-        <div>
+        <div className={css.container}>
           <h1>Phonebook</h1>
           <Form onAddContact={this.addContact} />
           <h2>Contacts</h2>
